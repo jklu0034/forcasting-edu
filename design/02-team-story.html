@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9f7;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-dim": "#dadad8", "inverse-on-surface": "#f1f1ef", "on-secondary-container": "#773318", "on-primary-fixed-variant": "#3f465c", "inverse-surface": "#2f3130", "tertiary-fixed": "#d5e3fd", "surface-container-low": "#f4f4f2", "inverse-primary": "#bec6e0", "on-tertiary-fixed": "#0d1c2f", "primary": "#000000", "surface-container-high": "#e8e8e6", "surface-container-lowest": "#ffffff", "secondary": "#94492c", "surface-bright": "#f9f9f7", "on-tertiary": "#ffffff", "primary-container": "#131b2e", "primary-fixed-dim": "#bec6e0", "surface-variant": "#e2e3e1", "surface-container": "#eeeeec", "on-surface-variant": "#45464d", "surface-tint": "#565e74", "secondary-fixed": "#ffdbcf", "on-secondary": "#ffffff", "primary-fixed": "#dae2fd", "on-surface": "#1a1c1b", "tertiary-container": "#0d1c2f", "surface-container-highest": "#e2e3e1", "error": "#ba1a1a", "on-secondary-fixed-variant": "#763217", "on-error": "#ffffff", "outline-variant": "#c6c6cd", "tertiary": "#000000", "secondary-container": "#fe9d7a", "outline": "#76777d", "surface": "#f9f9f7", "on-background": "#1a1c1b", "on-primary-fixed": "#131b2e", "secondary-fixed-dim": "#ffb59b", "on-error-container": "#93000a", "on-primary-container": "#7c839b", "tertiary-fixed-dim": "#b9c7e0", "on-secondary-fixed": "#380d00", "on-tertiary-container": "#76859b", "on-tertiary-fixed-variant": "#3a485c", "background": "#f9f9f7" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Western Confetti Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UwMeXtkZm1hT32iGjZzHmaH33e5J4VSvlXjZyzopfXHWYEUs1bWMQq4rXuLrV2-ubT_RzekBYZko3sTHHXChMxdP985y9HuJ0h8f7AwUS8KV7nvsA8MIDaLfJ8Fq-kx4xTCtBuiaAq3E7vSEb4JMy_fxME0GkDytXNef3sDcEovpS2iaum1CSnU3dZWpvrZZt6FsX0iaDThMjByJ22xWtdIgLf0Am5vXvcKbSx5bXJ0vtPkVFkxJvq7A8"/><span class="font-title-md text-title-md text-primary tracking-tight">Western Confetti</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgM6TfVKg6-PIpck-pU7tQjfPZ0GQZgCrV1tih-VaU6ti1iO-VIACcOMa6FXAj-DOP_li-zJvW_ep2sxn94wqBrfcezf0sz7cNU6QDMzJLUfNT6cFfn-Oju9moxMuiiGN-Z6KjaMUyJ3iltDBKP0v-c25cyo567PZ-qI_Gm_mFQ0phycVs7JVh0fq_o-6sMMmgfaSOD1q1h4pWwGP9yscoysmjitZjdyQMvJ2TC-RpLEi12-c7SZ-E"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Screen Header -->
+<section class="px-margin-mobile pt-space-md pb-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Pedagogy &amp; Origins</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">
+      Meet Western Confetti
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Founded by language educators passionate about Hebrew and modern partnership.
+    </p>
+</section>
+<!-- Mission Statement Card with Editorial Depth -->
+<section class="px-margin-mobile my-space-sm">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-secondary-fixed/30 pointer-events-none blur-2xl"></div>
+<div class="flex items-start gap-space-sm mb-space-xs">
+<span class="font-display-lg text-display-lg text-secondary leading-none select-none -mt-2">“</span>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface italic leading-snug">
+          Language is more than grammar—it’s how you build intimacy, share inside jokes, and connect to culture and heritage together.
+        </blockquote>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Our Core Thesis for Two</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm font-semibold">Duo Method</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility & Reach Stats Strip -->
+<section class="px-margin-mobile my-space-sm">
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">groups</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed/50 px-2 py-0.5 rounded-full">Global</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">1,400+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Couples enrolled across 18 countries</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium bg-surface-container-high px-2 py-0.5 rounded-full">Featured</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold leading-tight mb-0.5">Culture &amp; Press</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Jewish Current Culture &amp; Modern Wedding Guides</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Methodology Highlights -->
+<section class="px-margin-mobile mt-space-md mb-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-title-md text-title-md text-on-surface">Core Methodology</h2>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">How You Learn</span>
+</div>
+<div class="flex flex-col gap-gutter-mobile">
+<!-- Methodology 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex gap-space-md items-start">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-0.5">Relationship-Centered Pedagogy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Exercises engineered to provoke discussion, shared laughter, and joint problem solving between partners.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">psychology_alt</span>
+<span class="font-label-sm text-label-sm text-secondary">Paired prompt science</span>
+</div>
+</div>
+</div>
+<!-- Methodology 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex gap-space-md items-start">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">record_voice_over</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-0.5">Clear &amp; Unpretentious</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            No esoteric academic jargon. Practical modern Israeli Hebrew you can speak right away at dinner, family reunions, or Shabbat.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">speed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immediate conversational utility</span>
+</div>
+</div>
+</div>
+<!-- Methodology 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex gap-space-md items-start">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-0.5">Native Israeli Instructors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Experienced educators based in Jerusalem and Tel Aviv with master’s credentials in second-language acquisition and cultural mediation.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-secondary">Accredited MA linguists</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founders & Instructors Profiles -->
+<section class="px-margin-mobile mt-space-md mb-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Academic Leadership</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guided by Ulpan veterans</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-sm text-label-sm">TLV • JLM</span>
+</div>
+</div>
+<div class="flex flex-col gap-gutter-mobile">
+<!-- Profile 1: Noa Ben-David -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex gap-space-md items-start">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm" data-alt="Editorial portrait of Noa Ben-David, an intellectual Israeli female language curriculum designer in her mid-thirties with warm hazel eyes, soft natural sunlit terrace in Jerusalem, calm porcelain and maritime indigo aesthetic, wearing an unpretentious linen shirt, conveying pedagogical authority and empathetic warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4AbxefSrPNz6aAWLs5QUCApTiSU6jYhmUbzcxhhxcjcX3bdTr40jwYcaBLp_zSPpn7tSqmb12JBk76tXoPA2kG3N7OLInnGiRI5ugKeWrg05ZgP05SK6xkhqZ86cYYDIoJrVGZkgbNDdkpyeYQeG8_-6e0GtuWCLjWI_JUSiyTNKXV93JLLo-XjMBVYvF9D5MvQUwtpjzmfLFtvLB0s0wQOnhdHQTxFOUY-1piwoehyKYMxzPrRS0"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">menu_book</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Noa Ben-David</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/40 px-2 py-0.5 rounded-full font-medium">Co-founder</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-space-xs">Head of Curriculum</p>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Former Senior Lecturer at Hebrew University Ulpan with 12+ years designing accelerated Hebrew fluency frameworks for adult couples.
+            </p>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">workspace_premium</span>
+<span class="font-label-sm text-label-sm">Hebrew Univ. Alumna</span>
+</div>
+<span class="text-surface-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">history_edu</span>
+<span class="font-label-sm text-label-sm">Syllabus Designer</span>
+</div>
+</div>
+</div>
+<!-- Profile 2: Eitan Stern -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex gap-space-md items-start">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm" data-alt="Editorial portrait of Eitan Stern, a charismatic male educator in his late thirties with glasses, relaxed coastal Tel Aviv courtyard background with olive branches, wearing navy knitwear, warm approachable candid smile, high-end lifestyle editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB99CckXvckF3_5WePbuAU9cA8TSIeHEhW1mL9ZxdmuhlzY7NLv6jqmMedgjOQ1tPYkxqDgXBZPycLlifrARS-joL0hjDaizqaPUwJ1VjGKjkEghcs2WaIzwWoLiAD-aR1QhJKQNJ6z9Hg0CzVclQ0OCfk26rqkRgvUEl1Zt7ucuWDhMwoGO0fJiFVKfBiUuvtAxP184DuKI65TpLx8T56Xw8pqne7-Z3pbYUVxL0NrksjeJqoyRZ3f"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">handshake</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Eitan Stern</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/40 px-2 py-0.5 rounded-full font-medium">Co-founder</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-space-xs">Conversational Specialist</p>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Passionate about cross-cultural communication for intercultural couples. Specializes in building domestic fluency habits that stick.
+            </p>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">record_voice_over</span>
+<span class="font-label-sm text-label-sm">Cross-Cultural Specialist</span>
+</div>
+<span class="text-surface-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">diversity_2</span>
+<span class="font-label-sm text-label-sm">Interfaith Advisor</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experiential Dual-Practice Preview / Moment of Delight -->
+<section class="px-margin-mobile my-space-md">
+<div class="rounded-xl bg-surface-container-high p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Inside Our Classroom</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Sample Card
+        </span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mb-space-xs">Dual-Prompt Ritual</p>
+<!-- Interactive prompt toggle -->
+<div class="rounded-lg bg-surface-container-lowest p-space-md shadow-sm transition-all duration-300" id="prompt-preview">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="partner-turn-label">Partner A Prompt (Spoken)</span>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline" id="switch-prompt-btn">
+<span>Flip to Partner B</span>
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</button>
+</div>
+<div class="text-right mb-space-xs" dir="rtl">
+<span class="font-headline-md text-headline-md text-on-surface font-display-lg block" id="hebrew-text">?מָה שְׁלוֹמְךָ הַיּוֹם, מוֹתֶק</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<div class="font-label-md text-label-md text-secondary" id="translit-text">“Ma shlomkha hayom, motek?”</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant" id="english-text">“How are you feeling today, sweetheart?”</div>
+</div>
+<button aria-label="Listen to pronunciation" class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="audio-preview-btn">
+<span class="material-symbols-outlined text-[20px]" id="audio-icon">volume_up</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs text-center">
+        Practiced aloud in tandem—every evening in 12 deliberate minutes.
+      </p>
+</div>
+</section>
+<!-- Research & Credibility Hierarchy Annotation Box -->
+<section class="px-margin-mobile mb-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Designed for Research-Oriented Couples</h3>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">check_circle</span>
+<span><strong>No gamified streaks:</strong> Focus is on durable semantic retention and meaningful partner connection.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">check_circle</span>
+<span><strong>Linguistic Pedagogy:</strong> Applied CEFR-aligned communicative language methodology (Action-Oriented Approach).</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">check_circle</span>
+<span><strong>Marital &amp; Domestic Context:</strong> Tailored vocabulary for household, hospitality, in-laws, and holiday table conversation.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Primary Bottom Call-to-Action for Conversion -->
+<section class="px-margin-mobile pt-space-xs pb-space-lg">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg text-center shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed mx-auto mb-space-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">
+        Find the right course for your schedule
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mx-auto mb-space-md leading-relaxed">
+        Choose between live couple cohorts, asynchronous partner modules, or intensive pre-wedding tracks.
+      </p>
+<a class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-surface-tint active:scale-[0.98] transition-all shadow-sm" data-path="courses" href="#">
+<span>Browse Courses</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="mt-space-sm flex items-center justify-center gap-space-sm">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock</span>
+<span>Flexible rescheduling</span>
+</div>
+<span class="text-surface-variant">•</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">partner_exchange</span>
+<span>Dual access included</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    var isPartnerA = true;
+    var switchBtn = document.getElementById('switch-prompt-btn');
+    var turnLabel = document.getElementById('partner-turn-label');
+    var hebrewText = document.getElementById('hebrew-text');
+    var translitText = document.getElementById('translit-text');
+    var englishText = document.getElementById('english-text');
+    var audioBtn = document.getElementById('audio-preview-btn');
+    var audioIcon = document.getElementById('audio-icon');
+
+    if (switchBtn) {
+      switchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        isPartnerA = !isPartnerA;
+        if (isPartnerA) {
+          turnLabel.textContent = 'Partner A Prompt (Spoken)';
+          hebrewText.textContent = '?מָה שְׁלוֹמְךָ הַיּוֹם, מוֹתֶק';
+          translitText.textContent = '“Ma shlomkha hayom, motek?”';
+          englishText.textContent = '“How are you feeling today, sweetheart?”';
+          switchBtn.querySelector('span:first-child').textContent = 'Flip to Partner B';
+        } else {
+          turnLabel.textContent = 'Partner B Response (Spoken)';
+          hebrewText.textContent = '.הַכֹּל מְעֻלֶּה, אֲהוּבִי. תּוֹדָה שֶׁשָּׁאַלְתָּ';
+          translitText.textContent = '“Hakol me’uleh, ahuvi. Toda she-sha’alta.”';
+          englishText.textContent = '“Everything is wonderful, my love. Thanks for asking.”';
+          switchBtn.querySelector('span:first-child').textContent = 'Flip to Partner A';
+        }
+      });
+    }
+
+    if (audioBtn) {
+      audioBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        audioIcon.textContent = 'graphic_eq';
+        audioBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+        setTimeout(function() {
+          audioIcon.textContent = 'volume_up';
+          audioBtn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,23,42,0.04)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-20 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="journey" href="#"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Courses</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs transition-colors text-secondary font-semibold" data-path="team-story" href="#"><span class="material-symbols-outlined text-[24px]">diversity_1</span><span class="font-label-sm text-label-sm">Team / Story</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-support" href="#"><span class="material-symbols-outlined text-[24px]">support_agent</span><span class="font-label-sm text-label-sm">Contact</span></a></div></nav></body></html>

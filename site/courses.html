@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9f7;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-dim": "#dadad8", "inverse-on-surface": "#f1f1ef", "on-secondary-container": "#773318", "on-primary-fixed-variant": "#3f465c", "inverse-surface": "#2f3130", "tertiary-fixed": "#d5e3fd", "surface-container-low": "#f4f4f2", "inverse-primary": "#bec6e0", "on-tertiary-fixed": "#0d1c2f", "primary": "#000000", "surface-container-high": "#e8e8e6", "surface-container-lowest": "#ffffff", "secondary": "#94492c", "surface-bright": "#f9f9f7", "on-tertiary": "#ffffff", "primary-container": "#131b2e", "primary-fixed-dim": "#bec6e0", "surface-variant": "#e2e3e1", "surface-container": "#eeeeec", "on-surface-variant": "#45464d", "surface-tint": "#565e74", "secondary-fixed": "#ffdbcf", "on-secondary": "#ffffff", "primary-fixed": "#dae2fd", "on-surface": "#1a1c1b", "tertiary-container": "#0d1c2f", "surface-container-highest": "#e2e3e1", "error": "#ba1a1a", "on-secondary-fixed-variant": "#763217", "on-error": "#ffffff", "outline-variant": "#c6c6cd", "tertiary": "#000000", "secondary-container": "#fe9d7a", "outline": "#76777d", "surface": "#f9f9f7", "on-background": "#1a1c1b", "on-primary-fixed": "#131b2e", "secondary-fixed-dim": "#ffb59b", "on-error-container": "#93000a", "on-primary-container": "#7c839b", "tertiary-fixed-dim": "#b9c7e0", "on-secondary-fixed": "#380d00", "on-tertiary-container": "#76859b", "on-tertiary-fixed-variant": "#3a485c", "background": "#f9f9f7" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "gutter": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <title>Course Catalogue · Western Confetti</title>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Western Confetti Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UwMeXtkZm1hT32iGjZzHmaH33e5J4VSvlXjZyzopfXHWYEUs1bWMQq4rXuLrV2-ubT_RzekBYZko3sTHHXChMxdP985y9HuJ0h8f7AwUS8KV7nvsA8MIDaLfJ8Fq-kx4xTCtBuiaAq3E7vSEb4JMy_fxME0GkDytXNef3sDcEovpS2iaum1CSnU3dZWpvrZZt6FsX0iaDThMjByJ22xWtdIgLf0Am5vXvcKbSx5bXJ0vtPkVFkxJvq7A8"/><span class="font-title-md text-title-md text-primary tracking-tight">Western Confetti</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgM6TfVKg6-PIpck-pU7tQjfPZ0GQZgCrV1tih-VaU6ti1iO-VIACcOMa6FXAj-DOP_li-zJvW_ep2sxn94wqBrfcezf0sz7cNU6QDMzJLUfNT6cFfn-Oju9moxMuiiGN-Z6KjaMUyJ3iltDBKP0v-c25cyo567PZ-qI_Gm_mFQ0phycVs7JVh0fq_o-6sMMmgfaSOD1q1h4pWwGP9yscoysmjitZjdyQMvJ2TC-RpLEi12-c7SZ-E"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Discovery Header -->
+<section class="px-margin-mobile pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Couples Language Immersion</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">
+      Course Catalogue
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+      Select a course tailored to your relationship and language goals.
+    </p>
+</section>
+<!-- Couple Suitability Guide Banner (Interactive Micro-Experience) -->
+<section class="px-margin-mobile my-space-xs">
+<div class="relative overflow-hidden bg-secondary-fixed text-on-secondary-fixed rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-0.5">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Suitability Guide</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant">60-sec match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed leading-snug mb-space-sm">
+            Not sure which course fits your levels? Both partners can take our 60-second suitability quiz.
+          </p>
+<button class="inline-flex items-center justify-center gap-space-xs h-9 px-space-md bg-secondary text-on-secondary rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-transform" id="quiz-trigger-btn">
+<span>Start Dual Quiz</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Pills (Thumb-accessible horizontal rail) -->
+<section class="py-space-sm">
+<div class="flex gap-space-xs overflow-x-auto px-margin-mobile no-scrollbar" id="filter-pills" role="tablist">
+<button aria-selected="true" class="filter-chip active flex items-center gap-space-xs px-space-md py-2 rounded-full font-label-md text-label-md whitespace-nowrap bg-primary text-on-primary shadow-sm transition-all" data-filter="all" role="tab">
+<span>All Courses</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest/20 text-on-primary text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+<button aria-selected="false" class="filter-chip flex items-center gap-space-xs px-space-md py-2 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-filter="beginners" role="tab">
+<span>Complete Beginners</span>
+</button>
+<button aria-selected="false" class="filter-chip flex items-center gap-space-xs px-space-md py-2 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-filter="mixed" role="tab">
+<span>Partner Starter (Mixed Level)</span>
+</button>
+<button aria-selected="false" class="filter-chip flex items-center gap-space-xs px-space-md py-2 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-filter="travel" role="tab">
+<span>Travel &amp; Conversational</span>
+</button>
+</div>
+</section>
+<!-- Course Product Cards: Vertical Stack -->
+<section class="px-margin-mobile flex flex-col gap-space-lg pt-space-xs pb-space-md" id="course-cards-stack">
+<!-- Card 1: Hebrew Foundations for Couples -->
+<article class="course-card bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200" data-category="beginners">
+<!-- Media Header with Rich Editorial Framing -->
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Warm sunlit Mediterranean terrace kitchen where an affectionate couple prepares shakshuka and reads handwritten Hebrew vocabulary notes from an open linen workbook with ceramic coffee mugs, warm morning terracotta tones, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQ3oGL2zLgqMCV4QftQrKdV5yMEuVSCyeLq11ifbXC6u5we5bK4uwsWDz0sGO3UUNcR2UGIySeCPyDi5sypAqVS-_ZD2qU0JW1jelC07vy9ygHfn1tX29H5AlIvVB8ES_8qLQrY8X02_hMMGf2tJzk_Xc-LF6tjFcNezKq_3t4oiZlWRem0EdbXsAPHeD0N1fNZNqldvL7Ei_z3K8IFFfjziLvMPjHDnV_fQbUD20htXUGSGvpVZQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Most Popular for Beginners</span>
+</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex justify-between items-end text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm opacity-90 block">Step 01 • Dual Groundwork</span>
+<span class="font-title-sm text-title-sm tracking-tight text-surface-container-lowest">Alef-Bet to Living Dialogue</span>
+</div>
+<span class="text-right font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/20 backdrop-blur-sm">6 Weeks</span>
+</div>
+</div>
+<!-- Card Core Information Architecture -->
+<div class="p-space-md flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mb-1">
+            Hebrew Foundations for Couples
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Engineered from ground zero for romantic partners seeking a shared linguistic routine without clinical flashcard fatigue.
+          </p>
+</div>
+<!-- Duo Learner Metric Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">people</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Learner Profile</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Both from scratch</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">schedule</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Daily Ritual</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">15 min / day</span>
+</div>
+</div>
+</div>
+<!-- Key Outcome & Format List -->
+<div class="space-y-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 mt-0.5 text-secondary">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">Key Outcome:</strong> Read vocalized Hebrew, order breakfast in Tel Aviv, and carry effortless 10-minute daily rituals together.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">headphones</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="font-semibold text-on-surface">Format:</strong> 24 duo-audio master lessons + 1 physical shared heirloom workbook.
+            </p>
+</div>
+</div>
+<!-- Pricing Transparency Block & CTA -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-[28px] font-bold text-on-surface leading-none">$189</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">one-time</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">
+                Always dual access (both partners included)
+              </span>
+</div>
+<div class="flex -space-x-2 shrink-0">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[12px] font-bold shadow-sm">You</div>
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-[12px] font-bold shadow-sm">+1</div>
+</div>
+</div>
+<a class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm active:scale-98 transition-transform" href="pathways.html#track-01">
+<span>View Course &amp; Enroll</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: The Bridge: Mixed-Level Hebrew -->
+<article class="course-card bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200" data-category="mixed">
+<!-- Media Header -->
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An intimate evening setting inside a cozy modern apartment, one partner gently coaching the other partner with a handwritten notebook, tea steaming, soft amber lamps, high-end editorial candid style, deep navy and warm wood aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXsFaJ6ReqqUhgim_RmGYtCArudDKFu7iOLuiCTjt2YtCxRD7bQHZodXghU6bnSic76Z3CbN6U5K6zLXy8O_MTk5w-7c_kP25tjYOgFCmyrH6fw2AeYi4LUfyWP33kZb0ffLE7EwM0zmQr_Dh0eHIVbnyTm-ueP62zORF01S_FYIGNIw1ZXL86PumCO9uzWSUqLXYzGmMIxbLix-4T3542i8RzAbpbi9saY3WQNSCOtUlgPbgQIm6w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>For One Native/Heritage + One Beginner</span>
+</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex justify-between items-end text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm opacity-90 block">Step 02 • Relationship Calibration</span>
+<span class="font-title-sm text-title-sm tracking-tight text-surface-container-lowest">Closing the Fluency Gap</span>
+</div>
+<span class="text-right font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/20 backdrop-blur-sm">5 Weeks</span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-space-md flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mb-1">
+            The Bridge: Mixed-Level Hebrew
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Removes the awkward power imbalance when one partner has childhood Hebrew or Israeli roots while the other is just discovering it.
+          </p>
+</div>
+<!-- Duo Learner Metric Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">balance</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Learner Profile</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Asymmetric skills</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">hourglass_bottom</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Daily Commitment</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">20 min / day</span>
+</div>
+</div>
+</div>
+<!-- Outcomes & Structure -->
+<div class="space-y-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 mt-0.5 text-secondary">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">Key Outcome:</strong> Equalize conversational confidence without frustration or boredom; co-create domestic inside jokes in Hebrew.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">forum</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="font-semibold text-on-surface">Format:</strong> 20 joint conversational prompt sessions designed for alternating speaking roles.
+            </p>
+</div>
+</div>
+<!-- Pricing Transparency Block & CTA -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-[28px] font-bold text-on-surface leading-none">$199</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">one-time</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">
+                Dual Access • Two synchronized accounts
+              </span>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">Shared License</span>
+</div>
+<a class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm active:scale-98 transition-transform" href="pathways.html#track-02">
+<span>View Course &amp; Enroll</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: Everyday Spoken Hebrew: Travel & Hearth -->
+<article class="course-card bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200" data-category="travel">
+<!-- Media Header -->
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stylish couple walking down an ancient sunlit limestone alleyway in Jaffa or Jerusalem, holding iced coffee, warm stone textures, coastal breeze, cinematic documentary photo, muted deep navy accents and soft sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIrI3BMV9OAWSoweTFWRka_Bq8N711KGJuc83SMA_p-Kq7XQEN0tIS4lUqU8wrkAnxizXFeGMcSibh8NIJpqoWJgrAoQoGtKmK6PgwtNw-ABSnRpOBVLM7KT87mNFNGvYz4TmIV4OKELs1mkoc4BpzYyX3nJetlSqznWnEZ-Y0UYYRs7GKfrxiONj6FbBaN3tj18HesThsI7m8lVfwfO5j5dEtS-e3ZiM8K21AYmfz4_zvgRh5hBlU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">flight_takeoff</span>
+<span>Intermediate Practice</span>
+</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex justify-between items-end text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm opacity-90 block">Step 03 • Hearth &amp; Journey</span>
+<span class="font-title-sm text-title-sm tracking-tight text-surface-container-lowest">Spontaneous Dialogue</span>
+</div>
+<span class="text-right font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/20 backdrop-blur-sm">4 Weeks</span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-space-md flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mb-1">
+            Everyday Spoken Hebrew: Travel &amp; Hearth
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            For couples with foundational Hebrew ready to master spontaneous dining, neighborhood navigation, and domestic banter.
+          </p>
+</div>
+<!-- Duo Learner Metric Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">explore</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Learner Profile</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Basics unlocked</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">calendar_month</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Commitment</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">4 Weeks intensive</span>
+</div>
+</div>
+</div>
+<!-- Outcomes & Structure -->
+<div class="space-y-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 mt-0.5 text-secondary">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">Key Outcome:</strong> Fluently banter in shuk markets, express intimate needs, and navigate travel with confidence.
+            </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">videocam</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="font-semibold text-on-surface">Format:</strong> 16 immersion video &amp; voice dialogue units with street recordings.
+            </p>
+</div>
+</div>
+<!-- Pricing Transparency Block & CTA -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-[28px] font-bold text-on-surface leading-none">$169</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">one-time</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">
+                Dual Access • Lifetime archive access
+              </span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Travel Ready</span>
+</div>
+<a class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm active:scale-98 transition-transform" href="pathways.html#track-03">
+<span>View Course &amp; Enroll</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Friction-Reducing Partner Synchronization FAQ Micro-Card -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">
+              Can we practice separately if our schedules differ?
+            </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-sm">
+            Yes, absolutely. Progress syncs automatically across both devices. Complete prompts during your daily commute or lunch break, and our system combines your inputs for your evening shared ritual.
+          </p>
+<div class="flex items-center gap-space-sm text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+<span>Instant sync on iOS, Android &amp; Web</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Couples Trust & UX Design Architecture Footprint -->
+<section class="px-margin-mobile pb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-semibold">Discovery Architecture Note</span>
+</div>
+<div class="space-y-space-xs text-on-surface-variant font-body-sm text-body-sm leading-normal">
+<p>
+          • <strong class="text-on-surface">Card Hierarchy &amp; Scannability:</strong> Visual badges immediately flag whether courses match two pure beginners or asymmetrical heritage couples, mitigating choice paralysis.
+        </p>
+<p>
+          • <strong class="text-on-surface">Cognitive Load Reduction:</strong> Bite-sized daily metrics (e.g. <em>15 min/day</em>) give couples realistic expectations before committing.
+        </p>
+<p>
+          • <strong class="text-on-surface">Uncompromising Pricing Transparency:</strong> Western Confetti licenses are permanently per-couple. No hidden per-seat fees or split subscriptions.
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Modal: 60-Second Dual Suitability Quiz -->
+<div class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="suitability-quiz-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-lg shadow-xl transform translate-y-full sm:translate-y-0 transition-transform duration-300 max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Dual Suitability Matcher</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-modal-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="py-space-sm space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-1">Question 1 of 2</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">What describes your partner's Hebrew comfort level?</h4>
+</div>
+<div class="space-y-space-xs">
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="accent-secondary w-4 h-4" name="quiz_p2_level" type="radio" value="zero"/>
+<div class="min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface block">Complete Beginner</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Cannot read the alphabet yet</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-secondary w-4 h-4" name="quiz_p2_level" type="radio" value="heritage"/>
+<div class="min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface block">Heritage / Bar-Bat Mitzvah Hebrew</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Recognizes letters &amp; basic prayers</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-secondary w-4 h-4" name="quiz_p2_level" type="radio" value="conversational"/>
+<div class="min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface block">Conversational Banter</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Understands family members speaking fast</span>
+</div>
+</label>
+</div>
+<div class="pt-space-sm">
+<button class="w-full h-12 bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg shadow-sm active:scale-98 transition-transform flex items-center justify-center gap-space-xs" id="submit-quiz-btn">
+<span>Calculate Our Recommended Course</span>
+<span class="material-symbols-outlined text-[18px]">spark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initCourseCatalogueUX() {
+    // Filter Chips Interactive State
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const courseCards = document.querySelectorAll('.course-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle selected state styling
+        filterButtons.forEach(b => {
+          b.setAttribute('aria-selected', 'false');
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+
+        btn.setAttribute('aria-selected', 'true');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+        const category = btn.getAttribute('data-filter');
+
+        // Filter cards smoothly
+        courseCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || category === cardCat) {
+            card.style.display = 'flex';
+            card.classList.remove('opacity-0');
+            card.classList.add('opacity-100');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('opacity-100');
+            card.classList.add('opacity-0');
+          }
+        });
+      });
+    });
+
+    // Suitability Quiz Modal Interactivity
+    const quizTrigger = document.getElementById('quiz-trigger-btn');
+    const quizModal = document.getElementById('suitability-quiz-modal');
+    const closeModal = document.getElementById('close-modal-btn');
+    const submitQuiz = document.getElementById('submit-quiz-btn');
+
+    function openQuiz() {
+      quizModal.classList.remove('opacity-0', 'pointer-events-none');
+      const inner = quizModal.querySelector('div');
+      inner.classList.remove('translate-y-full');
+      inner.classList.add('translate-y-0');
+    }
+
+    function closeQuiz() {
+      const inner = quizModal.querySelector('div');
+      inner.classList.add('translate-y-full');
+      inner.classList.remove('translate-y-0');
+      setTimeout(() => {
+        quizModal.classList.add('opacity-0', 'pointer-events-none');
+      }, 200);
+    }
+
+    if (quizTrigger) quizTrigger.addEventListener('click', openQuiz);
+    if (closeModal) closeModal.addEventListener('click', closeQuiz);
+
+    if (submitQuiz) {
+      submitQuiz.addEventListener('click', () => {
+        const selected = document.querySelector('input[name="quiz_p2_level"]:checked')?.value;
+        closeQuiz();
+
+        // Highlight recommended card with pulse effect
+        let targetFilter = 'beginners';
+        if (selected === 'heritage') targetFilter = 'mixed';
+        if (selected === 'conversational') targetFilter = 'travel';
+
+        const matchingFilterBtn = document.querySelector(`[data-filter="${targetFilter}"]`);
+        if (matchingFilterBtn) {
+          matchingFilterBtn.click();
+          const targetCard = document.querySelector(`[data-category="${targetFilter}"]`);
+          if (targetCard) {
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetCard.classList.add('ring-2', 'ring-secondary');
+            setTimeout(() => {
+              targetCard.classList.remove('ring-2', 'ring-secondary');
+            }, 2500);
+          }
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,23,42,0.04)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-20 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="journey" href="index.html"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs transition-colors text-secondary font-semibold" data-path="courses" href="courses.html"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Courses</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="team-story" href="story.html"><span class="material-symbols-outlined text-[24px]">diversity_1</span><span class="font-label-sm text-label-sm">Team / Story</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-support" href="contact.html"><span class="material-symbols-outlined text-[24px]">support_agent</span><span class="font-label-sm text-label-sm">Contact</span></a></div></nav></body></html>
