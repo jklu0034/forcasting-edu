@@ -18,34 +18,52 @@ Flow: Home → Course Catalogue → "View Course & Enroll" opens the matching tr
 on Pathways (`pathways.html#track-0N`) → "Begin Pathway" opens Contact with the
 enrolment topic and track preselected (`contact.html#enrol-track-N`).
 
+## Hosting
+
+`site/` is the complete, self-contained website: compiled CSS, self-hosted
+images, no build step on the server. Copy that folder to any static host.
+
+- **GitHub Pages** — `.github/workflows/pages.yml` deploys `site/` on every
+  push to the default branch. One-time setup: repo **Settings → Pages →
+  Build and deployment → Source: GitHub Actions**.
+- **Own web server (Nginx/Apache/IIS)** — copy the contents of `site/` to the
+  document root; `index.html` is the home page. Only Google Fonts is loaded
+  from outside the server.
+
 ## Run locally
 
 ```sh
-python3 -m http.server 8000 -d site
+npm run serve        # or: python3 -m http.server 8000 -d site
 # open http://localhost:8000
 ```
-
-Any static host works (GitHub Pages, Nginx, S3, etc.) — serve the `site/` folder.
 
 ## Updating from new design exports
 
 `design/` holds the original exports untouched. After replacing a file there,
-regenerate the four generated pages:
+rebuild (needs Node 18+ and Python 3):
 
 ```sh
-python3 scripts/build.py
+npm install
+npm run build
 ```
 
-The script wires up the tab/CTA links, adds page titles, deep-links the course
-cards, and fixes two defects in the exports (the quiz modal sitting underneath
-the tab bar, and an invalid CSS selector that broke the Pathways audio
-previews). It fails loudly if a design change means a fix no longer applies.
-`site/contact.html` is not generated and is edited directly.
+The build wires up the tab/CTA links, adds page titles and a favicon,
+deep-links the course cards, downloads any new images into
+`site/assets/img/`, compiles each export's inline Tailwind config into
+`site/assets/css/` (`main.css` for Home/Story/Courses/Contact, `pathways.css`
+for Pathways, which has its own palette), and fixes two defects in the
+exports (the quiz modal sitting underneath the tab bar, and an invalid CSS
+selector that broke the Pathways audio previews). It fails loudly if a design
+change means a fix no longer applies. Commit the rebuilt `site/`; CI rejects
+a push whose `site/` is out of date.
+
+`site/contact.html` is not generated and is edited directly; it uses
+`main.css`, so run the build after adding new Tailwind classes to it.
 
 ## Not yet wired up
 
 - The contact form has no backend; it validates and shows a confirmation only.
   The email address `support@westernconfetti.example` is a placeholder.
 - Notifications / profile icons in the header are visual only.
-- Tailwind's Play CDN is meant for prototyping; for production, compile the CSS
-  with the Tailwind CLI.
+- Some pages still carry the designer's "UX Decision" annotation notes from
+  the exports.
