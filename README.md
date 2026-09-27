@@ -16,7 +16,7 @@ hotlinked.
 
 Flow: Home → Course Catalogue → "View Course & Enroll" opens the matching track
 on Pathways (`pathways.html#track-0N`) → "Begin Pathway" opens Contact with the
-enrolment topic and track preselected (`contact.html?topic=enrol&track=N`).
+enrolment topic and track preselected (`contact.html#enrol-track-N`).
 
 ## Run locally
 

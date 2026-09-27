@@ -29,7 +29,7 @@
 <span class="material-symbols-outlined text-[22px]">mail</span>
 </span>
 <span class="font-title-sm text-title-sm text-on-surface">Email Us</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Replies within 24h</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant break-all select-all">support@westernconfetti.example</span>
 </a>
 <a class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs active:scale-[0.98] transition-transform" href="#support-form">
 <span class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
@@ -173,17 +173,15 @@
       trackField.classList.toggle('hidden', topic.value !== 'enrol');
     }
 
-    // Preselect from links such as contact.html?topic=enrol&track=2
-    var params = new URLSearchParams(window.location.search);
-    if (params.get('topic') && topic.querySelector('option[value="' + params.get('topic') + '"]')) {
-      topic.value = params.get('topic');
-    }
-    if (params.get('track') && track.querySelector('option[value="' + params.get('track') + '"]')) {
-      track.value = params.get('track');
+    // Preselect from links such as contact.html#enrol-track-2
+    var match = /^#enrol-track-(\d)$/.exec(window.location.hash);
+    if (match && track.querySelector('option[value="' + match[1] + '"]')) {
+      topic.value = 'enrol';
+      track.value = match[1];
     }
     syncTrackField();
     topic.addEventListener('change', syncTrackField);
-    if (params.get('topic')) {
+    if (match) {
       document.getElementById('support-form').scrollIntoView({ block: 'start' });
     }
 

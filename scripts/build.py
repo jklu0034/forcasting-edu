@@ -109,7 +109,7 @@ def couples_pathways(html):
     return replace_n(
         html,
         r'<button (class="h-11 px-5 rounded-xl bg-primary[^"]*")>(\s*<span>Begin Pathway</span>.*?)</button>',
-        lambda i, m: f'<a {m.group(1)} href="contact.html?topic=enrol&amp;track={i}">{m.group(2)}</a>',
+        lambda i, m: f'<a {m.group(1)} href="contact.html#enrol-track-{i}">{m.group(2)}</a>',
         expected=3,
     )
 
